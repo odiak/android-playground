@@ -2,6 +2,7 @@ package net.odiak.playground
 
 import android.app.Application
 import com.facebook.stetho.Stetho
+import com.squareup.picasso.Picasso
 
 class MainApplication : Application() {
 
@@ -9,5 +10,7 @@ class MainApplication : Application() {
         super.onCreate()
 
         Stetho.initializeWithDefaults(this)
+
+        Picasso.with(this).setIndicatorsEnabled(true)
     }
 }
